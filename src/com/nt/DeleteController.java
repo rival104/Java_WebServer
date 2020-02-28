@@ -27,6 +27,7 @@ public class DeleteController extends HttpServlet{
 			if(isDeleted) {
 				pw.write("<h2>Employee deleted succesfully</h2>");
 				pw.write("<a class='btn btn-primary' href='delete.html' role='button'>Go Back</a>");
+				pw.close();
 				return;
 			}
 			
@@ -35,6 +36,7 @@ public class DeleteController extends HttpServlet{
 		}
 		pw.write("<h2 style='color:red;'>Error Deleting Employee</h2>");
 		pw.write("<a class='btn btn-primary' href='delete.html' role='button'>Go Back</a>");
+		pw.close();
 	}
 
 }

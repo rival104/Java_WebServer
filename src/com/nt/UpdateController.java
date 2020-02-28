@@ -28,6 +28,7 @@ public class UpdateController extends HttpServlet{
 			if(isUpdated) {
 				pw.write("<h2>Employee updated succesfully</h2>");
 				pw.write("<a class='btn btn-primary' href='update.html' role='button'>Go Back</a>");
+				pw.close();
 				return;
 			}
 		} catch (Exception e) {
@@ -35,6 +36,7 @@ public class UpdateController extends HttpServlet{
 		}
 		pw.write("<h2 style='color:red;'>Employee didn't Update</h2>");
 		pw.write("<a class='btn btn-primary' href='update.html' role='button'>Go Back</a>");
+		pw.close();
 		
 	}
 }

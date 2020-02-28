@@ -17,26 +17,52 @@
 <body class="mt-30">
 	<div class="container">
 		<div class="row justify-content-md-center">
-			<h2>Register Employee here:</h2>
-		</div>
-		<div class="row justify-content-md-center">
-
-			<form action="register" autocomplete="off">
-				<div class="form-group">
-					<label for="id">Employee ID:</label> <input type="text"
-						class="form-control" name="id" placeholder="Enter ID here">
-
-					<label for="name">Name:</label> <input type="text"
-						class="form-control" name="name" placeholder="Enter Name here">
-
-					<label for="sal">Salary:</label> <input type="text"
-						class="form-control" name="sal" placeholder="Enter Salary here">
+			<!--Custom Material form -->
+			<div class="card">
+				<h5
+					class="card text-white bg-info mb-3 card-header text-center py-4">
+					<strong>Register New Employee</strong>
+				</h5>
+				<!--Card content-->
+				<div class="card-body px-lg-5 pt-0">
+					<!-- Form -->
+					<form class="text-center" style="color: #757575;" action="register"
+						autocomplete="off">
+						<!-- ID -->
+						<div class="md-form">
+							<input type="text" class="form-control" id="employeeId" name="id"
+								placeholder="Enter ID here"> <label for="employeeId">Employee
+								ID</label>
+						</div>
+						<!-- Name -->
+						<div class="md-form">
+							<input type="text" class="form-control" id="employeeName"
+								name="name" placeholder="Enter Name here"> <label
+								for="employeeName">Name</label>
+						</div>
+						<!-- Salary -->
+						<div class="md-form">
+							<input type="text" class="form-control" id="employeeSal"
+								name="sal" placeholder="Enter Salary here"> <label
+								for="employeeSal">Salary</label>
+						</div>
+						<!-- button -->
+						<button
+							class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+							type="submit">Register</button>
+						<a
+							class="btn btn-outline-secondary btn-rounded btn-block my-4 waves-effect z-depth-0"
+							href="index.html" role="button">Go Back</a>
+					</form>
+					<!-- Form -->
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
-				<a class="btn btn-secondary" href="index.html" role="button">Go Back</a>
-			</form>
+			</div>
+			<!--Custom Material form -->
 		</div>
+
 	</div>
+
+
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

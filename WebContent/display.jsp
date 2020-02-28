@@ -1,6 +1,20 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="header.jsp"%>
 
 <div class="container">
+	 <c:if test = "${!isFound}">
+        <div class="row justify-content-md-center">
+		<div class="alert alert-warning alert-dismissible fade show"
+			role="alert">
+			<strong>Query Not Found!</strong> Please check Id in the filed below.
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+	</div>
+      </c:if>
+	
 	<div class="row justify-content-md-center">
 		<h2>Display Employee Info</h2>
 		<table class="table">
@@ -15,14 +29,15 @@
 			<tbody>
 				<tr>
 					<th scope="row">1</th>
-						<td>${emp.getId()}</td>
-						<td>${emp.name}</td>
-						<td>${emp.sal}</td>
-					</tr>
-				
+					<td>${emp.getId()}</td>
+					<td>${emp.name}</td>
+					<td>${emp.sal}</td>
+				</tr>
+
 			</tbody>
 		</table>
-		<a class="btn btn-secondary" href="select.html" role="button">Go Back</a>
+		<a class="btn btn-secondary" href="select.html" role="button">Go
+			Back</a>
 	</div>
 
 </div>

@@ -17,22 +17,26 @@ public class RegisterController extends HttpServlet{
 		
 		PrintWriter pw = res.getWriter();
 		res.setContentType("text/html");
-		int id = Integer.parseInt(req.getParameter("id"));
-		String name = req.getParameter("name");
-		int sal = Integer.parseInt(req.getParameter("sal"));
-		boolean isAdded = EmpDao.add(id, name, sal);
-		
-		if(isAdded) {
-			pw.write("<h2> Employee added successfully </h2>");
-			pw.write("<a class=\"btn btn-primary\" href=\"register.html\" role=\"button\">Go Back</a>");
-		} else {
-			pw.write("<h2 style={color:red}>Error adding employees!!</h2>");
-			pw.write("<a class=\"btn btn-primary\" href=\"register.html\" role=\"button\">Go Back</a>");
+		try {
+			int id = Integer.parseInt(req.getParameter("id"));
+			String name = req.getParameter("name");
+			int sal = Integer.parseInt(req.getParameter("sal"));
+			boolean isAdded = EmpDao.add(id, name, sal);
+			
+			if(isAdded) {
+				pw.write("<h2> Employee added successfully </h2>");
+				pw.write("<a class=\"btn btn-primary\" href=\"register.html\" role=\"button\">Go Back</a>");
+				return;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		pw.close();
-//		RequestDispatcher rd = req.getRequestDispatcher("register.jsp");
-//		rd.forward(req, res);
+	
+		pw.write("<h2 style='color:red;'>Error adding employees!!</h2>");
+		pw.write("<a class=\"btn btn-primary\" href=\"register.html\" role=\"button\">Go Back</a>");
 		
+		pw.close();
+
 	}
 	
 

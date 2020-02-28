@@ -3,7 +3,15 @@
 
 <div class="container">
 	<div class="row justify-content-md-center">
-		<h2>Display All Employee</h2>
+	
+		<div class="card border-primary mb-3" style="width: 60rem;">
+			<div class="card-body text-primary">
+				<h5
+					class="card-header text-center py-4">
+					<strong>Display All Employee</strong>
+				</h5>
+			</div>
+		</div>
 		<table class="table">
 			<thead class="thead-dark">
 				<tr>
@@ -25,6 +33,7 @@
 			</tbody>
 		</table>
 		<a class="btn btn-secondary" href="index.html" role="button">Go Back</a>
+		
 	</div>
 
 </div>
