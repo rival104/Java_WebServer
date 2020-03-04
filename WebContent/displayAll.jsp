@@ -2,10 +2,10 @@
 <%@ include file="header.jsp"%>
 
 <div class="container">
-	<div class="row justify-content-md-center">
+	<div class="row justify-content-center">
 	
 		<div class="card border-primary mb-3" style="width: 60rem;">
-			<div class="card-body text-primary">
+			<div class="card-body">
 				<h5
 					class="card-header text-center py-4">
 					<strong>Display All Employee</strong>

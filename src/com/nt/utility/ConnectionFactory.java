@@ -10,8 +10,7 @@ public class ConnectionFactory {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee", "root", "root");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Something went wrong: "+e.getMessage());
 		}
 	}
 	

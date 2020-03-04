@@ -16,7 +16,7 @@
 </head>
 <body class="mt-30">
 	<div class="container">
-		<div class="row justify-content-md-center">
+		<div class="row justify-content-center">
 			<!--Custom Material form -->
 			<div class="card">
 				<h5
